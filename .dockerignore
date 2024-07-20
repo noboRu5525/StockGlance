@@ -1,0 +1,12 @@
+# Pythonキャッシュファイルを無視
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# その他の不要なファイルやディレクトリを無視
+.DS_Store
+.git
+.gitignore
+.vscode
+.idea
