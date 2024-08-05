@@ -10,9 +10,6 @@ COPY requirements.txt .
 # 依存関係をインストール
 RUN pip install --no-cache-dir -r requirements.txt
 
-# .envファイルをコピー
-COPY .env .
-
 # アプリケーションコードをコピー
 COPY app.py .
 
