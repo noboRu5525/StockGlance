@@ -1,18 +1,19 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
+from home import home
 
-# サンプルデータセットを読み込む
-df = px.data.iris()
+def main():
+    page = st.sidebar.radio("Choose a page", ['ホーム', '検索（サンプル）', '業界（サンプル）'])
+    if page == "ホーム":
+        home()
+    elif page == "検索（サンプル）":
+        # sample()
+        pass
+    elif page == "業界（サンプル）":
+        # sample()
+        pass
 
-# Plotlyで散布図を描画する
-fig_scatter = px.scatter(df, x="sepal_width", y="sepal_length")
-selection = st.plotly_chart(fig_scatter, key="iris_scatter", on_select="rerun")
 
-# selectionには選択されたデータが入っている
-with st.expander("selection"):
-    st.write(selection)
-
-# selectionをDataFrameに変換してから表示する
-df_selected = pd.DataFrame(selection["selection"]["points"])
-st.dataframe(df_selected)
+if __name__ == "__main__":
+    main()

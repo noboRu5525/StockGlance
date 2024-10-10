@@ -2,4 +2,13 @@
 docker build -t stockglance .
 
 # 実行
+docker run --rm --env-file .env -p 8501:8501 stockglance
+
+# 実行（.envなし）
 docker run --rm -p 8501:8501 stockglance
+
+
+# python実行のみ
+docker run --env-file .env -p 8501:8501 -v $(pwd):/app --rm -it stockglance
+
+# localhost:8501にアクセス
