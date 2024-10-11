@@ -20,6 +20,14 @@ docker build -t stockglance .
 docker run -p 8501:8501 -v $(pwd):/app --rm -it stockglance
 ```
 
+起動
+
+```jsx
+streamlit run app.py
+```
+
+その後、localhost:8501にアクセス
+
 基本的にapp.pyを変更する．
 
 追加したいライブラリに関してはrequirements.txtに追加する．
