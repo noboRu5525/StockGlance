@@ -1,24 +1,32 @@
 任意ディレクトリにて以下のコードを順番に実行する
 
 ```jsx
-git clone https://github.com/noboRu5525/streamlit_base.git
+git clone https://github.com/noboRu5525/StockGlance.git
 ```
 
 ```jsx
-cd streamlit_base
+cd StockGlance
 ```
 
 ビルド
 
 ```jsx
-docker build -t streamlit_app .
+docker build -t stockglance .
 ```
 
 実行
 
 ```jsx
-docker run --rm -p 8501:8501 streamlit_app
+docker run -p 8501:8501 -v $(pwd):/app --rm -it stockglance
 ```
+
+起動
+
+```jsx
+streamlit run app.py
+```
+
+その後、localhost:8501にアクセス
 
 基本的にapp.pyを変更する．
 
