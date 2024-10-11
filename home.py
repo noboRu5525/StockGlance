@@ -6,9 +6,7 @@ edinetcode = pd.read_csv('./data/Edinetcode.csv', header=1, encoding='cp932')
 print(edinetcode)
 
 def home(): 
-    st.title('ホーム')
-    st.write(edinetcode.columns)
-
+    st.title('home')
 
     # テキスト入力ボックス
     text_input = st.text_input('検索するEDINETコードまたは提出者名の一部を入力してください', '')
