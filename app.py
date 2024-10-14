@@ -2,14 +2,19 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 from home import home
+from industry_analysis import industry_analysis
+
+# streamlitの設定
+st.set_page_config(
+    layout='wide'
+)
 
 def main():
-    page = st.sidebar.radio("Choose a page", ['ホーム', '検索（サンプル）', '業界（サンプル）'])
+    page = st.sidebar.radio("Choose a page", ['ホーム', '業種', '業界（サンプル）'])
     if page == "ホーム":
         home()
-    elif page == "検索（サンプル）":
-        # sample()
-        pass
+    elif page == "業種":
+        industry_analysis()
     elif page == "業界（サンプル）":
         # sample()
         pass
